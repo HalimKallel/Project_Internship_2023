@@ -1,0 +1,22 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="page-container">
+    <div class="frame">
+      <h1>Login Page</h1>
+      <div class="login-container">
+        <div class="col-md-6 offset-md-5">
+          <form>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" name="username" required [(ngModel)]="username">
+            </mat-form-field>
+            <br>
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" name="password" [type]="hidePassword ? 'password' : 'text'" required [(ngModel)]="password">
+              <mat-icon matSuffix (click)="togglePasswordVisibility()"><li><span class='Eye fontawesomeicon'></span></li>
+              </mat-icon>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="showSnackBar()">Login</button>        
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

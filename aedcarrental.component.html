@@ -1,0 +1,38 @@
+<div mat-dialog-title>
+    <h1>Rental Form</h1>
+  </div>
+  <form [formGroup]="carrentalForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Full Name</mat-label>
+        <input matInput type="text" placeholder="" formControlName="fullName" required="FullName">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="Ex. +216 ..." formControlName="phoneNumber" required="PhoneNumber">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Registration</mat-label>
+        <input matInput placeholder="Ex. 222Tun.." formControlName="registration" required="Registration">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Model</mat-label>
+        <input matInput placeholder="Ex. A3" formControlName="model" required="Model">
+      </mat-form-field>
+    </div>
+    <div class="row">
+        <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Agency</mat-label>
+            <input matInput placeholder="Ex. NY" formControlName="agency" required="Agency">
+        </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+  </div>
+  </form>
+  

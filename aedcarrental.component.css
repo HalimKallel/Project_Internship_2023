@@ -1,0 +1,38 @@
+.content {
+    padding-top: 10px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .form-field {
+    flex: 1 1 200px;
+    max-width: 200px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-datepicker-toggle {
+    margin-top: 10px;
+  }
+  .mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-left: 16px;
+  }
+  .dialog-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .dialog-actions button {
+    margin-left: 10px;
+    padding: 8px 50px;
+  }
+  
+  

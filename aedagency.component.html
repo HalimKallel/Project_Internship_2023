@@ -1,0 +1,32 @@
+<div mat-dialog-title>
+    <h1>Agency Form</h1>
+  </div>
+  <form [formGroup]="agencyForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Name Of Agency</mat-label>
+        <input matInput type="text" placeholder="" formControlName="name" required="name">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Adress</mat-label>
+        <input matInput placeholder="Ex. street 45" formControlName="address" required="address">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Phone Number</mat-label>
+        <input matInput  placeholder="Ex. +216..." formControlName="phonenumber" required="phonenumber">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>City</mat-label>
+        <input matInput  placeholder="Ex. NewYork" formControlName="city" required="city">
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+  </div>
+  </form>
+  

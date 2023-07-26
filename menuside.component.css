@@ -1,0 +1,23 @@
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-container {
+  height: 100%;
+  margin: 0;
+}
+
+.app-sidenav {
+  width: 230px;
+}
+
+.app-sidenav-content {
+  height: 100%;
+}
+
+.dashboard-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}

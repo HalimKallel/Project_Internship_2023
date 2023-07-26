@@ -1,0 +1,55 @@
+<div mat-dialog-title>
+    <h1>Car Form</h1>
+  </div>
+  <form [formGroup]="carForm" (ngSubmit)="onFormSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Registration</mat-label>
+        <input matInput type="text" placeholder="" formControlName="registration" required="Registration">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Model</mat-label>
+        <input matInput placeholder="Ex. AMG S63" formControlName="model" required="model">
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Year</mat-label>
+        <input matInput type="text" placeholder="Ex. 2013" formControlName="year" required="year">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="form-field">
+        <mat-label>Brand</mat-label>
+        <select matNativeControl formControlName="brand" required>
+          <option value="volvo">Volvo</option>
+          <option value="saab">Saab</option>
+          <option value="mercedes">Mercedes</option>
+          <option value="Renaulet">Renaulet</option>
+          <option value="Peugeot">Peugeot</option>
+          <option value="Volkswagen">Volkswagen</option>
+          <option value="BMW">BMW</option>
+          <option value="Chevrelet">Chevrelet</option>
+          <option value="GMC">GMC</option>
+          <option value="Ford">Ford</option>
+          <option value="Ferrari">Ferrari</option>
+          <option value="Citroen">Citroen</option>
+          <option value="Seat">Seat</option>
+          <option value="Haval">Haval</option>
+          <option value="Kia">Kia</option>
+          <option value="MG">MG</option>
+          <option value="Wallys">Wallys</option>
+          <option value="Fiat">Fiat</option>
+          <option value="Range Rover">Range Rover</option>
+          <option value="Aston Martin">Aston Martin</option>
+          <option value="Hyondai">Hyondai</option>
+          <option value="Opel">Opel</option>
+        </select>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-raised-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+  </div>
+  </form>
+  

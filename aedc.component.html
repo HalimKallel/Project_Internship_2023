@@ -1,0 +1,40 @@
+<div mat-dialog-title>
+  <h1>Customer Form</h1>
+</div>
+<form [formGroup]="cusForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content class="content">
+  <div class="row">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Full Name</mat-label>
+      <input matInput type="text" placeholder="" formControlName="fullName" required="fullName">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="Ex. +216 ..." formControlName="phoneNumber" required="phoneNumber">
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" placeholder="Ex. Test@gmail.com" formControlName="email" required="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="form-field">
+      <mat-label>Date of Birth</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Ex. test@gmail.com" formControlName="dob" required="dob">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <mat-radio-group aria-label="Select an option" formControlName="gender" required="gender">
+      <mat-label><br>Gender</mat-label>
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-raised-button (click)="onCancel()">Cancel</button>
+  <button mat-raised-button color="primary" type="submit">{{data ? 'Update':'Save'}}</button>
+</div>
+</form>

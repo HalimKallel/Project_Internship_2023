@@ -1,0 +1,139 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "carrental": [
+    {
+      "fullName": "ggfhw",
+      "phoneNumber": "5635354",
+      "registration": "xcbgn",
+      "model": "dfngfn",
+      "agency": "xbbngfn",
+      "id": 1
+    }
+  ],
+  "agency": [
+    {
+      "name": "locvoit",
+      "address": "street ben vjhg",
+      "phonenumber": "65456486",
+      "city": "NewYork",
+      "id": 1
+    },
+    {
+      "name": "voitloc",
+      "address": "street gh N 58",
+      "phonenumber": "68484",
+      "city": "Washington",
+      "id": 2
+    },
+    {
+      "name": "car rental ",
+      "address": "street dff N41",
+      "phonenumber": "544660",
+      "city": "Los Angelos",
+      "id": 3
+    }
+  ],
+  "car": [
+    {
+      "registration": "125Tun2150",
+      "model": "sedan",
+      "year": "2014",
+      "brand": "mercedes",
+      "id": 1
+    },
+    {
+      "registration": "222Tun214",
+      "model": "serie 5",
+      "year": "2014",
+      "brand": "BMW",
+      "id": 2
+    },
+    {
+      "registration": "112Tun7563",
+      "model": "clio 5",
+      "year": "2009",
+      "brand": "Renaulet",
+      "id": 3
+    },
+    {
+      "registration": "232Tun 4520",
+      "model": "Rio",
+      "year": "2014",
+      "brand": "Kia",
+      "id": 4
+    },
+    {
+      "registration": "95Tun120",
+      "model": "Punto",
+      "year": "2000",
+      "brand": "Fiat",
+      "id": 6
+    }
+  ],
+  "customer": [
+    {
+      "fullName": "ahmed",
+      "phoneNumber": "54486",
+      "email": "hjvjh@gmail.com",
+      "dob": "2023-07-08T23:00:00.000Z",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "fullName": "ali boni",
+      "phoneNumber": "251033",
+      "email": "alibouni@gmail.com",
+      "dob": "1997-06-09T23:00:00.000Z",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "fullName": "david brighton ",
+      "phoneNumber": "51120254",
+      "email": "david04@gmail.com",
+      "dob": "1956-10-08T23:00:00.000Z",
+      "gender": "male",
+      "id": 6
+    },
+    {
+      "fullName": "maria guio",
+      "phoneNumber": "412032555",
+      "email": "mariagi@hotmail.com",
+      "dob": "2001-07-11T23:00:00.000Z",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "fullName": "salha delif",
+      "phoneNumber": "44525458",
+      "email": "lgddv@yahoo.fr",
+      "dob": "1948-10-11T23:00:00.000Z",
+      "gender": "female",
+      "id": 8
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Halim",
+      "email": "hdhbg@gmail.com",
+      "message": "jg,bkug",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sidenav.toggle()" matTooltip="Menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Voitures.com</span>
+  <span class="toolbar-item-spacer"></span>
+  <button mat-icon-button matTooltip="Like">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Share">
+    <mat-icon>share</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="Notifications">
+    <mat-icon>notifications</mat-icon>
+  </button>
+  <button mat-icon-button matTooltip="My Account" [matMenuTriggerFor]="userAccountMenu">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
+    <button mat-menu-item routerLink="#">
+      <mat-icon>person</mat-icon><span>My Account</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>Logout
+    </button>      
+  </mat-menu>
+</mat-toolbar>
+
+<mat-sidenav-container class="app-container">
+  <mat-sidenav #sidenav mode="side" [class.mat-elevation-z4]="true" class="app-sidenav">
+    <mat-nav-list>
+      <mat-list-item routerLink="/dashboard">
+        <mat-icon style="margin-right: 5px;">dashboard</mat-icon>
+        <span style="margin-left: 5px;">Dashboard</span>
+      </mat-list-item>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          Pages
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="./agency">
+            <mat-icon>agency</mat-icon><span>Agency</span>
+          </a>
+          <a mat-list-item routerLink="./car">
+            <mat-icon>car</mat-icon><span>Car</span>
+          </a>
+          <a mat-list-item routerLink="./customer">
+            <mat-icon>customer</mat-icon><span>Customer</span>
+          </a>
+          <a mat-list-item routerLink="./carrental">
+            <mat-icon>customer</mat-icon><span>Car Rental</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          Tools
+        </mat-expansion-panel-header>
+        <mat-nav-list>
+          <a mat-list-item routerLink="./contacts">
+            <mat-icon style="margin-right: 5px;">contacts</mat-icon><span style="margin-left: 5px;">Contacts</span></a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="app-sidenav-content">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
